@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-    j = 0
+    i = 0
     mstr = ""
     for c in str:
-        if j != n:
+        if i != n:
             mstr += c
-       j += 1
+       i += 1
     return (mstr)
