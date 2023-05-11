@@ -1,6 +1,6 @@
 # Python_import_modules
 
-** *General expectations from this project.*
+*General expectations from this project.*
 - Why Python programming is awesome
 - How to import functions from another file
 - How to use imported functions
