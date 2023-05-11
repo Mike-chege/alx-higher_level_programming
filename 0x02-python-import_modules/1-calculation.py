@@ -3,7 +3,7 @@ if __name__ == "__main__":
     """Prints the results of add, sub, mul, and div"""
     from calculator_1 import add, sub, mul, div
 
-    a = 1
+    a = 10
     b = 5
 
     print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
