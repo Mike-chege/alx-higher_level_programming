@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import ctypes
-ctypes.windll.user32.MessageBoxW(0, "#pythoniscool\n", "Message", 0)
+import os
+os.write(1, "pythoniscool\n".encode("UTF-8"))
