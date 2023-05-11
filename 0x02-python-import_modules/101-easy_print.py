@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import builtins
-builtins.print("#pythoniscool")
+import ctypes
+ctypes.windll.user32.MessageBoxW(0, "#pythoniscool\n", "Message", 0)
