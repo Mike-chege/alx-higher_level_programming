@@ -5,7 +5,7 @@ if __name__ == "__main__":
     import py
     import sys
 
-    py_compile.compile("hidden_4py")
+    py_compile.compile("hidden_4.py")
 
     import hidden_4
 
