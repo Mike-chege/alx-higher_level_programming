@@ -6,12 +6,12 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    sum = add(a, b)
+    addition = add(a, b)
     difference = sub(a, b)
     product = mul(a,b)
     quotient = div(a, b)
 
-    print("The sum of {} and {} is {}".format(a, b, sum))
+    print("The sum of {} and {} is {}".format(a, b, addition))
     print("The difference between {} and {} is {}".format(a, b, difference))
     print("The product of {} and {} is {}".format(a, b, product))
     print("The quotient of {} and {} is {}".format(a, b, quotient))
