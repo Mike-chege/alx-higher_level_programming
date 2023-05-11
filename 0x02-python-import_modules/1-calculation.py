@@ -11,7 +11,7 @@ if __name__ == "__main__":
     product = mul(a,b)
     quotient = div(a, b)
 
-    print("The sum of {} and {} is {}".format(a, b, addition))
-    print("The difference between {} and {} is {}".format(a, b, difference))
-    print("The product of {} and {} is {}".format(a, b, product))
-    print("The quotient of {} and {} is {}".format(a, b, quotient))
+    print("{} +  {} = {}".format(a, b, addition)))
+    print("{} - {} = {}".format(a, b, difference))
+    print("{} * {} = {}".format(a, b, product))
+    print("{} / {} = {}".format(a, b, quotient))
