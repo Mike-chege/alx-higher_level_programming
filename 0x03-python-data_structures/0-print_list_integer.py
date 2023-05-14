@@ -2,4 +2,4 @@
 
 def print_list_interger(my_list=[]):
     for num in my_list:
-        print("{:d}".format(num))
+        print("{:d}".format(my_list[num]))
