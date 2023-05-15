@@ -4,7 +4,7 @@ def print_reversed_list_integer(my_list=[]):
     Prints all integers of a list in reverse order.
 
     Args:
-        list_n (list of int): The list of integers to print in reverse order.
+        my_list (list of int): The list of integers to print in reverse order.
             Defaults to an empty list if not provided.
     """
     if type(my_list) is list:
