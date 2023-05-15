@@ -1,54 +1,57 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 void reverse_list(listint_t **head);
-int list_identical(listint_t *l1, listint_t *l2);
+int list_equiv(listint_t *l1, listint_t *l2);
 
 /**
  * is_palindrome - checks if a linked list is a palindrome
- * @head: pointer to the head of the linked list
- * Return: 0 if not palindrome otherwise 1 if palindrome
+ * @head: double pointer to the head of the linked list
+ *
+ * Return: 0 (not palindrome) 1 (is palindrome)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *first_1, *second_2, *prevf, *top_half, *second_half, *mid;
+	listint_t *skip_1, *skip_2, *prev_s1, *first_half, *second_half, *mid;
 
+	/* linked lists of length 0 and 1 are palindromes by default */
 	if (!head || !(*head) || !((*head)->next))
 		return (1);
 
-	first_half = first_1 = second_2 = prevf = *head;
+	first_half = skip_1 = skip_2 = prev_s1 = *head;
 	second_half = mid = NULL;
 
-	while (first_1 && second_2 && second_2->next)
+	while (skip_1 && skip_2 && skip_2->next)
 	{
-		prevf = first_1;
-		first_1 = first_1->next;
-		second_2 = second_2->next->next;
+		prev_s1 = skip_1;
+		skip_1 = skip_1->next;
+		skip_2 = skip_2->next->next;
 	}
-	if (second_2 == NULL)
-		second_half = first_1;
-	else
+	if (skip_2 == NULL) /* Even # of nodes */
+		second_half = skip_1;
+	else /* odd number of nodes, there is a middle node */
 	{
-		mid = first_1;
-		second_half = first_1->next;
+		mid = skip_1;
+		second_half = skip_1->next;
 	}
-	prevf->next = NULL;
+	prev_s1->next = NULL; /* null terminate first half */
 	reverse_list(&second_half);
 
-	if (list_identical(top_half, second_half))
-		return (1);
+	if (list_equiv(first_half, second_half))
+		return (1); /* equivalent lists, palindrome found */
 	else
 		return (0);
 }
 
 /**
- * list_identical - checks if two linked lists contain identical data
+ * list_equiv - checks if two linked lists contain identical data and are
+ * the same length as each other
  * @l1: list one to compare to list two
  * @l2: list two to compare to list one
- * Return: 1 if equivalent 0 if not equal
+ *
+ * Return: 1 (equivalent) 0 (not equal)
  */
-int list_identical(listint_t *l1, listint_t *l2)
+int list_equiv(listint_t *l1, listint_t *l2)
 {
 	while (l1 || l2)
 	{
@@ -64,20 +67,22 @@ int list_identical(listint_t *l1, listint_t *l2)
 
 /**
  * reverse_list - reverses a linked list
- * @head: double pointer to head of linked list
- * Return: void
+ * @head: double pointer to head of linked list so we can modify it
+ *
+ * Return: always void, modifies head itself.
  */
 void reverse_list(listint_t **head)
 {
-	listint_t *next = NULL, *prev = NULL, *s_node;
+	listint_t *next = NULL, *prev = NULL, *cur;
 
-	s_node = *head;
-	while (s_node)
+	cur = *head;
+	while (cur)
 	{
-		next = s_node->next;
-		s_node->next = prev;
-		prev = s_node;
-		s_node = next;
+		next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
 	}
 	*head = prev;
 }
+
