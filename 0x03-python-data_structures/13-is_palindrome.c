@@ -77,7 +77,7 @@ void reverse_list(listint_t **head)
 		next = new->next;
 		new->next = prev;
 		prev = new;
-		new= next;
+		new = next;
 	}
 	*head = prev;
 }
