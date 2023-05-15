@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Task 7
 
-def add_tuple(tuple=(), tuple_b=()):
+def add_tuple(tuple_a=(), tuple_b=()):
     """
     adds two tuples
     """
