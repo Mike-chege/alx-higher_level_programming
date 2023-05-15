@@ -35,7 +35,7 @@ int is_palindrome(listint_t **head)
 	prev_s1->next = NULL;
 	reverse_list(&second_half);
 
-	if (list_equiv(first_half, second_half))
+	if (list_identical(first_half, second_half))
 		return (1);
 	else
 		return (0);
