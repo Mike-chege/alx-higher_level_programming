@@ -8,10 +8,10 @@
  */
 void print_python_list_info(PyObject *p)
 {
+	const char *e_kind = NULL;
 	PyListObject *list_p = NULL;
 	ssize_t size = 0;
 	ssize_t i = 0;
-	const char *e_kind = NULL;
 
 	size = PyList_Size(p);
 	list_p = (PyListObject *)p;
@@ -19,7 +19,7 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %ld\n", (signed long)(list_p->allocated));
 	while (i < size)
 	{
-		e_kind = Py_TYPE(list_p->ob_item[i])->tp_name;
+		e_kind = Py_TYPE(list_p->ob_t[i])->tmp_n;
 		printf("Element %ld: %s\n", i, e_kind);
 		i++;
 	}
