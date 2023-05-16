@@ -1,27 +1,27 @@
-#include <Python.h>
+#include "Python.h"
 #include <stdlib.h>
 
 /**
- * print_python_list_info - prints information about a python list object
+ * print_python_list_info - prints info about a python list object
  * @p: pointer to generic PyObject
  * Return: Nothing
  */
 void print_python_list_info(PyObject *p)
 {
-	const char *e_kind = NULL;
-	PyListObject *item = NULL;
-	ssize_t size = 0;
-	ssize_t j = 0;
+	PyListObject *py_list = NULL;
+	ssize_t list_len = 0;
+	ssize_t i = 0;
+	const char *ele_type = NULL;
 
-	size = PyList_Size(p);
-	item = (PyListObject *)p;
-	printf("[*] Size of the Python List = %ld\n", size);
-	printf("[*] Allocated = %ld\n", (signed long)(item->allocated));
-	while (j < size)
+	list_len = PyList_Size(p);
+	py_list = (PyListObject *)p;
+	printf("[*] Size of the Python List = %ld\n", list_len);
+	printf("[*] Allocated = %ld\n", (signed long)(py_list->allocated));
+	while (i < list_len)
 	{
-		e_kind = Py_TYPE(size->ob_item[j])->tp_name;
-		printf("Element %ld: %s\n", j, e_kind);
-		j++;
+		ele_type = Py_TYPE(py_list->ob_item[i])->tp_name;
+		printf("Element %ld: %s\n", i, ele_type);
+		i++;
 	}
 }
 
