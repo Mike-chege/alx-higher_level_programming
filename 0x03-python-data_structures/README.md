@@ -1,4 +1,4 @@
-# python_data_structures
+# Python_data_structures
 
 This project contains python data structures Tasks which include lists and tuples and also some c Tasks such as linked list palindrome and cpython. All the tasks are 14. 13 mandatory 1 advanced.
 
