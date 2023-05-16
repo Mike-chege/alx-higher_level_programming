@@ -19,7 +19,8 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %ld\n", (signed long)(list_p->allocated));
 	while (i < size)
 	{
-		e_kind = Py_TYPE(list_p->ob_t[i])->tmp_n;
+		e_kind = Py_TYPE(list_p->ob_item[i])->tp_name;
+
 		printf("Element %ld: %s\n", i, e_kind);
 		i++;
 	}
