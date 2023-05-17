@@ -3,13 +3,12 @@
 
 def only_diff_elements(set_1, set_2):
     """
-    find all elements present in only one set and add the 
-    to the set
+    find all elements present in only one set and add them to the set
     """
     only_diff = set()
     for elem in set_1:
         if elem not in set_2:
-            only_dif.add(elem)
+            only_diff.add(elem)
     for elem in set_2:
         if elem not in set_1:
             only_diff.add(elem)
