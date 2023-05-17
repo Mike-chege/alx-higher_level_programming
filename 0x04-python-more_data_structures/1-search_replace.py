@@ -8,4 +8,4 @@ def search_replace(my_list, search, replace):
         if result[i] == search:
             result[i] = replace
 
-            return result
+    return result
