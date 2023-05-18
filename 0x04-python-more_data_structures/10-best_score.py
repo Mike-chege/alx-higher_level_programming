@@ -2,9 +2,6 @@
 # Task 10
 
 def best_score(a_dictionary):
-    """
-    find the key with the biggest integer value
-    """
     best_key = None
     best_value = float('-inf')
     for key in a_dictionary:
