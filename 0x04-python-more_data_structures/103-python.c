@@ -5,8 +5,8 @@
  * PyList_GetItem
  * PyBytes_AS_STRING
  * PyBytes_GET_SIZE
- */
-#include <stdio.h>
+*/
+
 #include <Python.h>
 
 void print_python_list(PyObject *p);
@@ -20,7 +20,7 @@ void print_python_bytes(PyObject *p);
 void print_python_list(PyObject *p)
 {
 	PyListObject *list = (PyListObject *)p;
-        PyVarObject *var = (PyVarObject *)p;
+	PyVarObject *var = (PyVarObject *)p;
 	int size, alloc, i;
 	const char *type;
 
