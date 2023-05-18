@@ -1,18 +1,26 @@
-#include <Python.h>
+/*
+ * You are not allowed to use the following macros/functions:
 
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
+    Py_SIZE
+    Py_TYPE
+    PyList_GetItem
+    PyBytes_AS_STRING
+    PyBytes_GET_SIZE
+*/
+#include <Python.h>
+#include <stdio.h>
 
 /**
- * print_python_list - Prints basic info about Python lists.
- * @p: A PyObject list object.
+ * print_python_bytes - Prints some basic info about Python bytes objects
+ * @p: A pointer to a Python bytes object
+ * Return: Nothing
  */
 void print_python_list(PyObject *p)
 {
+	PyListObject *list = (PyListObject *)p;
+        PyVarObject *var = (PyVarObject *)p;
 	int size, alloc, i;
 	const char *type;
-	PyListObject *list = (PyListObject *)p;
-	PyVarObject *var = (PyVarObject *)p;
 
 	size = var->ob_size;
 	alloc = list->allocated;
@@ -29,15 +37,15 @@ void print_python_list(PyObject *p)
 			print_python_bytes(list->ob_item[i]);
 	}
 }
-
 /**
- * print_python_bytes - Prints basic info about Python byte objects.
- * @p: A PyObject byte object.
+ * print_python_bytes - Prints some basic info about Python bytes objects
+ * @p: A pointer to a Python bytes object
+ * Return: Nothing
  */
 void print_python_bytes(PyObject *p)
 {
-	unsigned char i, size;
 	PyBytesObject *bytes = (PyBytesObject *)p;
+	unsigned char i, size;
 
 	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
