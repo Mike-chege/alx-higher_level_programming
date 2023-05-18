@@ -15,7 +15,7 @@ void print_python_list(PyObject *p)
 	const char *l_kind;
 
 	allocation = py_lst->allocated;
-	size = var->ob_size;
+	length = var->ob_size;
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %d\n", length);
