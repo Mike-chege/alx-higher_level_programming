@@ -1,3 +1,12 @@
+/*
+ * You are not allowed to use the following macros/functions:
+ * Py_SIZE
+ * Py_TYPE
+ * PyList_GetItem
+ * PyBytes_AS_STRING
+ * PyBytes_GET_SIZE
+ */
+#include <stdio.h>
 #include <Python.h>
 
 void print_python_list(PyObject *p);
