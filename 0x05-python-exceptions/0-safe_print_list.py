@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Task 1
+# Task 0
 
 def safe_print_list(my_list=[], x=0):
     """
