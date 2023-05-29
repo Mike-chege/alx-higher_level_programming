@@ -9,7 +9,7 @@ def safe_print_integer_err(value):
     Otherwise, returns False.
     and prints in stderr the error precede by Exception
     """
-     try:
+    try:
         print("{:d}".format(value))
         return True
     except (ValueError, TypeError):
