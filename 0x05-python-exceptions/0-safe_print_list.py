@@ -2,6 +2,10 @@
 # Task 1
 
 def safe_print_list(my_list=[], x=0):
+    """
+    prints elements of a list and returns the real number
+    of elements printed
+    """
     i = 0
     count = 0
     for i in range(0, x):
