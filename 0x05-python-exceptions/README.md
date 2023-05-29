@@ -1,1 +1,24 @@
-# Python_Errors_and_Exceptions
+# Python_Exceptions
+
+This project covers Errors detected during execution which are called exceptions and are not unconditionally fatal.
+
+## Exception examples.
+
+```
+>>> 10 * (1/0
+
+)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+>>> 4 + spam*3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'spam' is not defined
+
+>>> '2' + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+```
