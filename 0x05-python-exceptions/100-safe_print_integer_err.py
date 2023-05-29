@@ -3,11 +3,12 @@
 
 import sys
 
+
 def safe_print_integer_err(value):
     """
     prints an integer with error message
     """
-    try: 
+    try:
         print("{:d}".format(value))
         return True
     except (TypeError, ValueError):
