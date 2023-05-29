@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # Task 8
 
+import sys
+
+
 def safe_function(fct, *args):
     """
     This function excecutes a function safely
