@@ -1,4 +1,4 @@
-#!/usr//bin/python3
+#!/usr/bin/python3
 # Task 8
 """definition of a square (based on 6-square.py)"""
 
