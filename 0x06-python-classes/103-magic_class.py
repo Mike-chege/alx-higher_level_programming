@@ -4,7 +4,7 @@
 
 
 class MagicClass:
-    """MagicClass representation"""
+    """circle representation"""
 
     def __init__(self, radius=0):
         """
