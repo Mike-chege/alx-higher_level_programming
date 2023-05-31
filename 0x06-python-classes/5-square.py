@@ -5,7 +5,7 @@
 
 class Square:
     """
-    class attributes:
+    class attributes
     """
     def __init__(self, size=0):
         """
