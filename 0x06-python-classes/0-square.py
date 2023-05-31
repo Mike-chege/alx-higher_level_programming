@@ -3,6 +3,6 @@
 
 class Square:
     """
-    empty class for Square
+    Is an empty class Square that defines a square
     """
     pass
