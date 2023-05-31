@@ -24,3 +24,4 @@ This project contains OOP tasks i.e classes and objects. The tasks are 10, 6 man
 - What is the __dict__ of a class and/or instance of a class and what does it contain
 - How does Python find the attributes of an object or class
 - How to use the getattr function
+
