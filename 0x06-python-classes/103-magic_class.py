@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Task 10
-"""Writing the Python class MagicClass / ByteCode"""
+"""definition of a MagicClass looking exactly like the provided ByteCode"""
 
 
 class MagicClass:
