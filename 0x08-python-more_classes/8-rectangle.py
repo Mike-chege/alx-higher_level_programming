@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 # Task 8
-"""A class Rectangle that defines a rectangle  (based on 7-rectangle.py)"""
+"""A class Rectangle that defines a rectangle (based on 7-rectangle.py)"""
 
 
 class Rectangle():
     """
-    class rectangle definition
+    class rectangle creation
     """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """
-        instantiation method for object creation
+        """ instantiation method for object creation
         """
         self.width = width
         self.height = height
@@ -21,8 +20,8 @@ class Rectangle():
 
     def __str__(self):
         """
-        provides __str__ method for the object when str()
-        or the print() is called
+        provides __str__ method for object when str()
+        or print() is called
         """
         if self.width == 0 or self.height == 0:
             return ""
@@ -99,4 +98,4 @@ class Rectangle():
         if rect_2.area() > rect_1.area():
             return rect_2
         else:
-            return
+            return rect_1
