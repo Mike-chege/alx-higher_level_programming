@@ -19,8 +19,9 @@ class Rectangle():
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """ provides __str__ method for object when str()
-            or print() is called
+        """
+        provides __str__ method for object when str()
+        or print() is called
         """
         string = ""
         if self.width == 0 or self.height == 0:
