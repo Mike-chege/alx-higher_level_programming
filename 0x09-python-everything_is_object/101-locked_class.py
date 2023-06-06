@@ -11,4 +11,4 @@ class LockedClass:
         if name == 'first_name':
             self.__dict__[name] = value
         else:
-            raise AttributeError("Cannot create new attribute '{}'".format(name))
+            raise AttributeError("'LockedClass' object has no attribute '" + name + "'")
