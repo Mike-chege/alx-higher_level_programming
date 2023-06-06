@@ -8,9 +8,7 @@ class LockedClass:
     class LockedClass definition
     """
     def __setattr__(self, name, value):
-        if hasattr(self, name):
-            super().__setattr__(name, value)
-        elif name == 'first_name':
-            super().__setattr__(name, value)
+        if name == 'first_name':
+            self.__dict__[name] = value
         else:
             raise AttributeError("Cannot create new attribute '{}'".format(name))
