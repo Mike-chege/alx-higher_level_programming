@@ -4,10 +4,10 @@
 
 
 class LockedClass:
-    """Locked class: can't set instance attributes to it
     """
-    def __setattr__(self, name, value):
-        if name == "first_name":
-            self.__dict__[name] = value
-        else:
-            raise AttributeError("'LockedClass' object has no attribute '" + name + "'")
+    class LockedClass with no class or object attribute
+    which  prevents the user from dynamically creating new
+    instance attributes, except if the new instance attribute
+    is called first_name
+    """
+    __slots__ = ["first_name"]
