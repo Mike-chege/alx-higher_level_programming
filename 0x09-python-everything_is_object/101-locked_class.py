@@ -4,8 +4,7 @@
 
 
 class LockedClass:
-    """
-    LockedClass with no class or object attribute
+    """Locked class: can't set instance attributes to it
     """
     def __setattr__(self, name, value):
         if name == "first_name":
