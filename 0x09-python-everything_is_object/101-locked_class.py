@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # Task 30
-"""A class LockedClass with no class or object attribute"""
+"""LockedClass definition with no class or object attribute"""
 
 
 class LockedClass:
     """
-    class LockedClass definition
+    No setting instance attributes in LockedClass
     """
     def __setattr__(self, name, value):
         if name == 'first_name':
