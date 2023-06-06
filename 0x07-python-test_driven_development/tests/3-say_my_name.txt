@@ -1,0 +1,32 @@
+# Test Driven Development for python
+
+===========================================
+Test For String Names File 3-say_my_name.py
+===========================================
+
+
+>>> say_name = __import__('3-say_my_name').say_my_name
+>>> say_name("neo", "cole")
+My name is neo cole 
+
+>>> say_name("neo")
+My name is neo 
+
+>>> say_name("")
+My name is  
+
+>>> say_name(42)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+>>> say_name("jordan", 42)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+>>> say_name()
+Traceback (most recent call last):
+	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
