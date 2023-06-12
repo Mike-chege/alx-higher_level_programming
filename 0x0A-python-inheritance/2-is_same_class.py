@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Task 2
-"""A function that returns True or Falsse"""
+"""A function that returns True or False"""
 
 
 def is_name_class(obj, a_class):
