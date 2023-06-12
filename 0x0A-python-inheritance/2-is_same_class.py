@@ -3,7 +3,7 @@
 """A function that checks if an object is an instance a class"""
 
 
-def is_name_class(obj, a_class):
+def is_same_class(obj, a_class):
     """
     checking if an object is exactly an instance of
     a class"""
