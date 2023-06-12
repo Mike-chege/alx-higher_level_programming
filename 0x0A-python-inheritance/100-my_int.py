@@ -5,8 +5,8 @@
 
 class MyInt(int):
     """invert int operators == and != """
-    def __eq__(self, value):
-        """overiding == operator with != """
-    def __ne__(self, value):
-        """overiding != operator with =="""
-        return self.real == value
+    def __eq__(self, other):
+        return (int(self) != other)
+
+    def __ne__(self, other):
+        return (int(self) == other)
