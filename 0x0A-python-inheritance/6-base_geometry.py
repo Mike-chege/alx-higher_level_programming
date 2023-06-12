@@ -2,12 +2,8 @@
 # Task 6
 """A class BaseGeometry (based on 5-base_geometry.py)"""
 
-
 class BaseGeometry:
-    """class definition"""
+    """class BaseGeometry representation"""
     def area(self):
-         """
-         raises an Exception with a message
-         area() is not implemented
-         """
+        """function that raises exception"""
         raise Exception("area() is not implemented")
