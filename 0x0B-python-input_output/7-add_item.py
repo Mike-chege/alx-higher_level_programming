@@ -14,13 +14,12 @@ def main():
     """
     try:
         new_list = load_from_json_file('add_item.json')
-    except NameError:
+    except FileNotFoundError:
         new_list = []
-
     new_list.extend([sys.argv[i] for i in range(0, len(sys.argv)) if i != 0])
     try:
         save_to_json_file(new_list, 'add_item.json')
-    except NameError:
+    except FileNotFoundError:
         print("no such file or directory")
 
 
