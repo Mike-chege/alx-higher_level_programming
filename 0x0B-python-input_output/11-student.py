@@ -4,11 +4,11 @@
 
 
 class Student:
-    """Represent a student."""
+    """Class Student definition"""
 
     def __init__(self, first_name, last_name, age):
         """
-        Initialize a new Student.
+        instantiation of names and age
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -16,7 +16,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-        Get a dictionary representation of the Student
+        Retrieving dictionary representation of a student
         """
         if (type(attrs) == list and
                 all(type(ele) == str for ele in attrs)):
@@ -25,7 +25,7 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Replace all attributes of the Student
+        Replace all attributes of the Student instance
         """
-        for ky, v in json.items():
-            setattr(self, ky, v)
+        for ky, val in json.items():
+            setattr(self, ky, val)
