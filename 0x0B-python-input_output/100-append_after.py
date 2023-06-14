@@ -8,10 +8,11 @@ def append_after(filename="", search_string="", new_string=""):
     Inserting text to the file after each line
     containing a specific string
     """
+    insert=""
     with open(filename) as newfile:
         for line in newfile:
-            text += line
+            insert += line
             if search_string in line:
-                text += new_string
+                insert += new_string
     with open(filename, "w") as wri:
-        wri.write(text)
+        wri.write(insert)
