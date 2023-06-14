@@ -20,8 +20,8 @@ def main():
     new_list.extend([sys.argv[i] for i in range(0, len(sys.argv)) if i != 0])
     try:
         save_to_json_file(new_list, 'add_item.json')
-    except None:
-        pass
+    except NameError:
+        print("no such file or directory")
 
 main()
 
