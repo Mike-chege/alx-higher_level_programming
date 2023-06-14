@@ -1,17 +1,27 @@
 #!/usr/bin/python3
 # Task 7
 """adds all arguments to a Python list, and then saves them to a file"""
+
+
 import sys
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file
-    load_from_json_file = \
-        __import__('6-load_from_json_file.py').load_from_json_file
-
+def main():
+    """
+    the main function
+    """
     try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+        new_list = load_from_json_file('add_item.json')
+    except:  # file didn't exist to read from
+        new_list = []
+
+    new_list.extend([sys.argv[i] for i in range(0, len(sys.argv)) if i != 0])
+    try:
+        save_to_json_file(new_list, 'add_item.json')
+    except:
+        pass
+
+main()
+
