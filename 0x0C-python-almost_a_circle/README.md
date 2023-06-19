@@ -14,7 +14,7 @@ This projects goes more deeper into OOP, covering new things such as how to come
 - Unittest
 - Read/Write file
 
-## And also
+## And also,
 - args and kwargs
 - Serialization/Deserialization
 - JSON
