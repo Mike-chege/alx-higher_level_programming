@@ -89,7 +89,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        saveing a list of objects to a file as a JSON string
+        saving a list of
+        objects to a file as a JSON string
         """
         new_list = None
         list_obj_copy = list_objs.copy()
@@ -122,7 +123,7 @@ class Base:
         try:
             with open(cname + '.json', 'r', encoding='utf-8') as myFile:
                 text = myFile.read()
-        except:
+        except FileNotFoundError:
             return []
 
         inst_list = []
@@ -157,7 +158,7 @@ class Base:
         try:
             with open(cname + '.csv', 'r', encoding='utf-8') as myFile:
                 lines = myFile.readlines()
-        except:
+        except FileNotFoundError:
             return []
 
         inst_list = []
