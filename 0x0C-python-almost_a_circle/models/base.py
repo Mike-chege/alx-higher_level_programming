@@ -124,7 +124,7 @@ class Base:
         try:
             with open(cname + '.json', 'r', encoding='utf-8') as myFile:
                 text = myFile.read()
-        except NameError:
+        except:
             return []
 
         new_inst = []
