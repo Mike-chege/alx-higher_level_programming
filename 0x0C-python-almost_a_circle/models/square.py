@@ -37,14 +37,7 @@ class Square(Rectangle):
                     self.y = arg
         elif kwargs is not None:
             for (key, value) in kwargs.items():
-                if key == "id":
-                    self.id = value
-                elif key == "size":
-                    self.size = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+                setattr(self, key, valu)
 
     def to_dictionary(self):
         """

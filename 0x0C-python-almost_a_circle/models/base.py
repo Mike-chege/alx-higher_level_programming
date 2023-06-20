@@ -115,10 +115,6 @@ class Base:
 
         return dummy_inst
 
-    def update(self, *args, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
-
     @classmethod
     def load_from_file(cls):
         """
