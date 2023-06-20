@@ -108,11 +108,11 @@ class Base:
         """
         creating a new instance of the child class
         """
-        dummy_inst = cls() # Creating a dummy instance with default id=NONE
+        dummy_inst = cls(1, 1) # Creating a dummy instance with default id=NONE
+        if dummy_inst is not None:
+            dummy_inst.update(**dictionary)
 
         # Calling the update method to apply real values to dictionary
-        dummy_inst.update(**dictionary)
-
         return dummy_inst
 
     @classmethod
@@ -127,7 +127,7 @@ class Base:
         except NameError:
             return []
 
-        inst_list = []
+        new_inst = []
         dict_list = cls.from_json_string(text)
         for ele in dict_list:
             inst_list.append(cls.create(**ele))
