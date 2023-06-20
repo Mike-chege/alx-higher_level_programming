@@ -8,13 +8,13 @@ import turtle
 
 class Base:
     """
-    The main base class to be used by all other classes
+    class Base definition
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """
-        instantiates the base class
+        instantializing the base class
         """
         if id is not None:
             self.id = id
@@ -25,15 +25,16 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        Returning JSON string representation of
-        the list of dictionaries
+        Returns JSON string representation
+        of list_dictionaries
         """
         return str(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
         """
-        Returns a list of dictionary objects evaluated from json string
+        Returns a list of dictionary objects
+        from json string
         """
         if json_string is None or len(json_string) == 0:
             json_string = "[]"
@@ -42,9 +43,8 @@ class Base:
     @staticmethod
     def to_csv_lines(list_csv):
         """
-        Returning CSV string representation from a
-        list of child class which are all the
-        objects represented in their csv form
+        Returnng CSV string representation
+        from list of child class
         """
         builder = ""
         for csv in list_csv:
@@ -58,9 +58,8 @@ class Base:
     @staticmethod
     def from_csv_lines(list_csv):
         """
-        Returning list of CSV instance objects which
-        contain child class data
-        from list of lines
+        returning the list of
+        CSV instance objects
         """
         if list_csv is None or len(list_csv) == 0:
             return []
@@ -74,7 +73,8 @@ class Base:
     @staticmethod
     def get_cname_from_sublist(list_objs):
         """
-        gets the cname to use when saving objects
+        geting the appropiate cname
+        to use when saving objects
         """
         cname = None
         for i, obj in enumerate(list_objs):
@@ -89,7 +89,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        saving a list of objects as a JSON string
+        saveing a list of objects to a file as a JSON string
         """
         new_list = None
         list_obj_copy = list_objs.copy()
@@ -108,17 +108,15 @@ class Base:
         """
         creating a new instance of the child class
         """
-        new_inst = cls(1, 1) # Creating a dummy instance with default id=NONE
+        new_inst = cls(1, 1)
         if new_inst is not None:
             new_inst.update(**dictionary)
-
-        # Calling the update method to apply real values to dictionary
         return new_inst
 
     @classmethod
     def load_from_file(cls):
         """
-        Returns the list of instances in the class file
+        Returning a list of instances
         """
         cname = cls.__name__
         try:
@@ -127,7 +125,7 @@ class Base:
         except:
             return []
 
-        new_inst = []
+        inst_list = []
         dict_list = cls.from_json_string(text)
         for ele in dict_list:
             inst_list.append(cls.create(**ele))
@@ -136,7 +134,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
-        saving a list of child class objects to their file as csv
+        serializes and deserializes in CSV
         """
         list_obj_copy = list_objs.copy()
         cname = cls.get_cname_from_sublist(list_obj_copy)
@@ -152,8 +150,8 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """
-        loading a list of objects from their respective
-        csv file
+        loading the list
+        of objects from their csv file
         """
         cname = cls.__name__
         try:
@@ -173,8 +171,7 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """
-        draw (method) draws the rectangles and squares using the
-        imported turtle GL
+        drawing both the rectangles and squares using imported turtle
         """
         window = turtle.Screen()
         window.bgcolor("green")
