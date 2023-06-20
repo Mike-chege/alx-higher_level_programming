@@ -16,11 +16,11 @@ class Base:
         """
         instantiates the base class
         """
-        if id is not None:
-            self.id = id
-        else:
+        if id is None:
+            self.id = Base.__nb_objects + 1
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+        else:
+            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -139,7 +139,6 @@ class Base:
         saving a list of child class objects to their file as csv
         """
         list_obj_copy = list_objs.copy()
-        # get_cname_from_sublist also removes non subclass eles, so copy
         cname = cls.get_cname_from_sublist(list_obj_copy)
         super_list = []
 
