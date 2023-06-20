@@ -108,12 +108,12 @@ class Base:
         """
         creating a new instance of the child class
         """
-        dummy_inst = cls(1, 1) # Creating a dummy instance with default id=NONE
-        if dummy_inst is not None:
-            dummy_inst.update(**dictionary)
+        new_inst = cls(1, 1) # Creating a dummy instance with default id=NONE
+        if new_inst is not None:
+            new_inst.update(**dictionary)
 
         # Calling the update method to apply real values to dictionary
-        return dummy_inst
+        return new_inst
 
     @classmethod
     def load_from_file(cls):
