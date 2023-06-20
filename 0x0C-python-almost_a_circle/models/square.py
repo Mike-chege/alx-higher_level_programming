@@ -22,8 +22,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        using *args argument and kwargs arguments respectively
-        to instantiatiate the method
+        using *args argument and **kwargs arguments respectively
+        to create the dictionary effectively
         """
         if args is not None and len(args) > 0:
             for i, arg in enumerate(args):
@@ -37,7 +37,14 @@ class Square(Rectangle):
                     self.y = arg
         elif kwargs is not None:
             for (key, value) in kwargs.items():
-                setattr(self, key, valu)
+                if key == "id":
+                    self.id = value
+                elif key == "size":
+                    self.size = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     def to_dictionary(self):
         """
