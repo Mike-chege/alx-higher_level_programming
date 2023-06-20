@@ -108,9 +108,11 @@ class Base:
         """
         creating a new instance of the child class
         """
-        new_inst = cls(1, 1)
-        if new_inst is not None:
-            new_inst.update(**dictionary)
+        dummy_inst = cls() # Creating a dummy instance with default id=NONE
+
+        # Calling the update method to apply real values to dictionary
+        dummy_inst.update(**dictionary)
+
         return new_inst
 
     @classmethod
