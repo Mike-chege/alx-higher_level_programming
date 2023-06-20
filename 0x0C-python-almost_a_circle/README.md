@@ -18,4 +18,3 @@ This projects goes more deeper into OOP, covering new things such as how to come
 - args and kwargs
 - Serialization/Deserialization
 - JSON
-
