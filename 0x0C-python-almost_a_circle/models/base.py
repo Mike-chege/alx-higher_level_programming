@@ -159,7 +159,7 @@ class Base:
         try:
             with open(cname + '.csv', 'r', encoding='utf-8') as myFile:
                 lines = myFile.readlines()
-        except NameError:
+        except:
             return []
 
         inst_list = []
