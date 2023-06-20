@@ -106,7 +106,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        creating a new instance of the child class 
+        creating a new instance of the child class
         """
         new_inst = cls(1, 1)
         if new_inst is not None:
@@ -122,7 +122,7 @@ class Base:
         try:
             with open(cname + '.json', 'r', encoding='utf-8') as myFile:
                 text = myFile.read()
-        except:
+        except NameError:
             return []
 
         inst_list = []
@@ -158,7 +158,7 @@ class Base:
         try:
             with open(cname + '.csv', 'r', encoding='utf-8') as myFile:
                 lines = myFile.readlines()
-        except:
+        except NameError:
             return []
 
         inst_list = []
