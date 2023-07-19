@@ -1,5 +1,7 @@
--- script to create a new user in server
--- DDL query to do so.
+-- This script creates the MySQL server
+-- user user_0d_1
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
--- query to grant perms to user
-GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost';
+-- Grant privilleges
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
+-- Flush the privilleges
+FLUSH PRIVILEGES;
