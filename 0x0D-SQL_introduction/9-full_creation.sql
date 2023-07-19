@@ -1,6 +1,6 @@
 -- This script creates a table second table in the database
 -- hbtn_0c_0 in MySQL server
-CREATE TABLE IF NOT EXIST second_table(id INT, name VARCHAR(256), score INT);
+CREATE TABLE IF NOT EXISTS second_table(id INT, name VARCHAR(256), score INT);
 INSERT INTO second_table (id, name, score)
  VALUES (1, 'john', 10);
 INSERT INTO second_table (id, name, score)
