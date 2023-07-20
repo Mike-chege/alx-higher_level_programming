@@ -31,5 +31,3 @@ mysql> quit
 Bye
 $
 ```
-To import a SQL dump
-```
