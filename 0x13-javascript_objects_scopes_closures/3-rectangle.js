@@ -1,27 +1,11 @@
-#!usr/bin/node
-class Rectangle {
-  constructor(w, h) {
-    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
-      // Create an empty object if w or h is not valid
-      return {};
-    }
-
-    this.width = w;
-    this.height = h;
+#!/usr/bin/node
+// A class Rectangle that defines a rectangle
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w > 0 && h > 0) { [this.width, this.height] = [w, h]; }
   }
 
-  print() {
-    if (this.width && this.height) {
-      for (let i = 0; i < this.height; i++) {
-        console.log('X'.repeat(this.width));
-      }
-    }
+  print () {
+    for (let val = 0; val < this.height; val++) console.log('X'.repeat(this.width));
   }
-}
-
-// Example usage
-const rectangle1 = new Rectangle(5, 3);
-rectangle1.print();
-
-const rectangle2 = new Rectangle(0, 4); // This will create an empty object
-rectangle2.print();
+};
