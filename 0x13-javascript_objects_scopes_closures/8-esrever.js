@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// This function returns the reversed version of a list
+// This function returns the reversed version of a list.
 exports.esrever = function (list) {
   let reversed = [];
   let val;
