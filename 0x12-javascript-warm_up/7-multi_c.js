@@ -1,17 +1,25 @@
 #!/usr/bin/node
+const process = require('process');
+let build = '';
+let failed = 'Missing number of occurrences';
+let num;
+let i;
 
-const arg = process.argv[2];
-
-if (!isNaN(arg)) {
-  const x = parseInt(arg);
-
-  if (x >= 0) {
-    for (let i = 0; i < x; i++) {
-      console.log('C is fun');
-    }
+if (process.argv.length > 2) {
+  num = parseInt(process.argv[2]);
+  if (isNaN(num)) {
+    build = failed;
   } else {
-    console.log('Number of occurrences must be non-negative');
+    for (i = 0; i < num; i++) {
+      if (i > 0) {
+        build += '\n';
+      }
+      build += 'C is fun';
+    }
   }
 } else {
-  console.log('Missing number of occurrences');
+  build = failed;
+}
+if (build !== '') {
+  console.log(build);
 }
