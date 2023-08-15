@@ -1,2 +1,3 @@
 #!/usr/bin/node
-console.log(`${process.argv[2]} is ${process.argv[3]}`);
+// Using the is format to print passed arguments
+console.log(`${process.argv[1]} is ${process.argv[2]}`);
