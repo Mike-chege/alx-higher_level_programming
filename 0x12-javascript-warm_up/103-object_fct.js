@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// Adding a new function to increment the current value
 let myObject = {
   type: 'object',
   value: 12
