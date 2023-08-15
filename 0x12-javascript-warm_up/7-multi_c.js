@@ -1,10 +1,10 @@
 #!/usr/bin/node
 // This script that prints x times “C is fun”
-const val = Math.floor(Number(process.argv[2]));
-if (isNaN(val)) {
+const x = Math.floor(Number(process.argv[2]));
+if (isNaN(x)) {
   console.log('Missing number of occurrences');
 } else {
-  for (let x = 0; x < val; x++) {
+  for (let val = 0; val < x; val++) {
     console.log('C is fun');
   }
 }
