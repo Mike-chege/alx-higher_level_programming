@@ -1,6 +1,5 @@
 #!/usr/bin/node
-/*
- * This function prints the number of arguments
+/* This function prints the number of arguments
  * already printed and the new argument value
  */
 let num = 0;
