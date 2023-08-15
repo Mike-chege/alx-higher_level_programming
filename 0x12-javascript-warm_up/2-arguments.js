@@ -1,11 +1,11 @@
 #!/usr/bin/node
-const nArgs = process.argv.length - 3;
+const nArgs = process.argv.length - 2;
 
-if (nArgs < 3)
+if (nArgs === 0)
 {
-	console.log("No arguments");
+	console.log("No argument");
 }
-else if (nArgs === 3)
+else if (nArgs === 1)
 {
 	console.log("Argument found");
 }
