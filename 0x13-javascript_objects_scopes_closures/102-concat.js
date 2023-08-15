@@ -3,4 +3,4 @@
 const fs = require('fs');
 const num1 = fs.readFileSync(process.argv[2], 'utf8');
 const num2 = fs.readFileSync(process.argv[3], 'utf8');
-fs.writeFileSync(process.argv[4], num2 + num2)
+fs.writeFileSync(process.argv[4], num1 + num2)
