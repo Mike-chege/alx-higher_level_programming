@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const nArgs = process.argv.length - 2;
+const nArgs = process.argv.length;
 
 if (nArgs === 0)
 {
