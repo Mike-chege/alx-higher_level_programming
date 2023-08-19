@@ -17,7 +17,7 @@ if __name__ == "__main__":
     username = args[1]
     password = args[2]
     data = args[3]
-    content = MySQLdb.connect(
+    db = MySQLdb.connect(
             host="localhost",
             user=username,
             passwd=password,
@@ -25,9 +25,9 @@ if __name__ == "__main__":
             port=3306)
 
     # Implementing the cursor
-    cursor = content.cursor()
-    row_vals = cursor.execute("SELECT * FROM states ORDER BY states.id")
+    crs = db.cursor()
+    row_vals = crs.execute("SELECT * FROM states ORDER BY states.id")
     # Fetching all results
-    results = cursor.fetchall()
+    results = crs.fetchall()
     for row in results:
         print(row)
