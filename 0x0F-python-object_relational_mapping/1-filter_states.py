@@ -3,8 +3,8 @@
 This script Lists states with a name starting with (N)
 """
 
-import sys
 import MySQLdb
+import sys
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
