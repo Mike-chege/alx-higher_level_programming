@@ -10,8 +10,7 @@ if __name__ == '__main__':
 
     # Implementing the cursor
     crs = db.cursor()
-    crs.execute("SELECT * FROM states \
-            WHERE BINARY name ='{}'".format(sys.argv[4]))
+    crs.execute("SELECT * FROM states WHERE BINARY name ='{}'".format(sys.argv[4]))
     # Implementing a list comprehension to print the output
     # And also iterate through the values in states with a for loop
     [print(state) for state in crs.fetchall()]
