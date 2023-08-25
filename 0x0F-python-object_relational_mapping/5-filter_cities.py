@@ -22,4 +22,4 @@ if __name__ == '__main__':
             ON cty.state_id=ste.id
             ORDER BY cty.id''')
 
-    print(','.join([cval[2] for cval in crs.fetchall() if cval[4] == sys.argv[4]]))
+    print(", ".join([cval[2] for cval in crs.fetchall() if cval[4] == sys.argv[4]]))
