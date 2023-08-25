@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     for s in session.query(State).order_by(State.id):
         # Getting the state objects
-        print("{}: {}".format(state.id, state.name))
-        for c in state.cities:
+        print("{}: {}".format(s.id, s.name))
+        for c in s.cities:
             # Getting the city objects related to the states
-            print("{}: {}".format(city.id, city.name))
+            print("{}: {}".format(c.id, c.name))
