@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This script changes the name of a State
-object from the database hbtn_0e_6_usa
+object from the database hbtn_0e_6_usa.
 """
 
 from sqlalchemy import create_engine
