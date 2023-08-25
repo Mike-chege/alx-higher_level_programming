@@ -24,6 +24,6 @@ if __name__ == '__main__':
     for s in session.query(State).order_by(State.id):
         # Getting the state objects
         print("{}: {}".format(s.id, s.name))
-        for c in s.cities:
+        for c in state.cities:
             # Getting the city objects related to the states
             print("{}: {}".format(c.id, c.name))
