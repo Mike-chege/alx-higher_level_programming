@@ -21,9 +21,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for s in session.query(State).order_by(State.id):
+    for state in session.query(State).order_by(State.id):
         # Getting the state objects
-        print("{}: {}".format(s.id, s.name))
-        for c in state.cities:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
             # Getting the city objects related to the states
-            print("{}: {}".format(c.id, c.name))
+            print("{}: {}".format(city.id, city.name))
