@@ -3,6 +3,6 @@
 # And displays the size of the body of the response
 
 url="$1"
-response=$(curl -sI "$url" | grep -w "content-length" | cut -f2 -d' ')
+response=$(curl -sI "$url" | grep -w "Content-Length" | cut -f2 -d' ')
 
 echo $response
