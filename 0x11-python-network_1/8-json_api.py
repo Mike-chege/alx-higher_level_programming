@@ -9,11 +9,7 @@ import sys
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 1:
-        letter = ""
-    else:
-        sys.argv[1]
-
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
     query = {"q": letter}
     request = requests.post("http://0.0.0.0:5000/search_user", query)
 
