@@ -13,6 +13,6 @@ request(url, function (error, response, body) {
     console.log(error);
   } else {
     starwars = JSON.parse(body);
-    console.log(starwars['title']);
+    console.log(starwars.title);
   }
 });
