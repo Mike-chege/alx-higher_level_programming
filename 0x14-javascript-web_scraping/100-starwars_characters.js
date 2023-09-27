@@ -14,9 +14,9 @@ request(url, function (error, response, body) {
     characters.forEach((character) => {
       request(character, function (error, response, body) {
         if (error == null) {
-		console.log(JSON.parse(body).name);
-	}
+          console.log(JSON.parse(body).name);
+        }
       });
     });
-   }
+  }
 });
